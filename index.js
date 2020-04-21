@@ -80,7 +80,15 @@ console.log(temperatureCtoF(24));
  *
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
  */
-function temperatureInF() {}
+function temperatureInF(t, "F") {
+  if ("F") {
+    return Math.round(t) + "F";
+  } else {
+    return temperatureCtoF(t) + "F";
+  }
+}
+
+console.log(temperatureCtoF(88, "F"));
 
 /**
  * ### Challenge `makePersonObject`
