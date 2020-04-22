@@ -158,9 +158,17 @@ console.log(getName());
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
  */
-function appleIndex(/* code here */) {
+function appleIndex(fruit) {
   /* code here */
+
+  for (let i = 0; i < fruit.length; i++) {
+    if (fruit[i] === "apple") {
+      return i;
+    }
+  }
 }
+
+console.log(appleIndex("apple"));
 
 /**
  * ### Challenge `isItAnApple`
