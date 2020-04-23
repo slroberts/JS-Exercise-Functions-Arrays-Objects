@@ -83,7 +83,7 @@ console.log(temperatureCtoF(24));
 function temperatureInF(t, F) {
   /* code here */
   let f = "F";
-  if (F === "F") {
+  if (F === f) {
     return Math.round(t) + F;
   } else {
     return temperatureCtoF(t) + f;
@@ -331,10 +331,19 @@ function getCarInfoById(inventory, id) {
  * with a `car_year` which is at most the given desired max year,
  * in the same order as they appear in the original inventory.
  */
-function getOlderCars(/* code here */) {
+function getOlderCars(inventory, maxYear) {
   /* code here */
-}
 
+  let olderCars = [];
+
+  for (let i = 0; i < inventory.length; i++) {
+    if (maxYear <= inventory[i]) {
+      olderCars.push(inventory[i].car_year);
+    }
+  }
+
+  return olderCars;
+}
 /**
  * ### Challenge `getGermanCars`
  * * THIS ONE IS A STRETCH GOAL. ATTEMPT IT ONLY AFTER
@@ -348,8 +357,21 @@ function getOlderCars(/* code here */) {
  * made by either `Audi` or `Mercedes-Benz` or `Volkswagen` or `BMW`,
  * in the same order as they appear in the original inventory.
  */
-function getGermanCars(/* code here */) {
+function getGermanCars(inventory) {
   /* code here */
+  let germanCars = [];
+  for (let i = 0; i < inventory.length; i++) {
+    if (
+      inventory[i] === "Audi" ||
+      inventory[i] === "Mercedes-Benz" ||
+      inventory[i] === "Volkswagen" ||
+      inventory[i] === "BMW"
+    ) {
+      germanCars.push(inventory[i].car_make);
+    }
+  }
+
+  return germanCars;
 }
 
 /**
